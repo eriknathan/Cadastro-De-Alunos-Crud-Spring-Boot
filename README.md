@@ -13,8 +13,6 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
 
-<br>
-
 <p align="center">
   <img alt="creataccount" src="/UI Design/pag01.png" width="100%"> <img alt="creataccount" src="/UI Design/pag02.png" width="100%">
   <img alt="creataccount" src="/UI Design/pag03.png" width="100%"> <img alt="creataccount" src="/UI Design/pag04.png" width="100%">
