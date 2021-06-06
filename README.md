@@ -17,13 +17,11 @@
 <br>
 
 <p align="center">
-  <img alt="creataccount" src="/UI Design/pag01.png" width="50%">
- <img alt="creataccount" src="/UI Design/pag02.png" width="50%">
- <img alt="creataccount" src="/UI Design/pag03.png" width="50%">
- <img alt="creataccount" src="/UI Design/pag04.png" width="50%">
+  <img alt="creataccount" src="/UI Design/pag01.png" width="50%"> <img alt="creataccount" src="/UI Design/pag02.png" width="50%">
+  <img alt="creataccount" src="/UI Design/pag03.png" width="50%"> <img alt="creataccount" src="/UI Design/pag04.png" width="50%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀| Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -34,9 +32,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Jquery
 - Bootstrap
 
-**Banco de Dados**
-- MySQL
-
 **BACK END**
 - Java
 - SpringBoot
@@ -44,12 +39,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JPA Repository
 - Thymeleaf
 
-## 💻 Projeto
+**BANCO DE DADOS**
+- MySQL
+
+## 💻| Projeto
 
 Essa é um site para Cadastro de Alunos, com as funções de listar, cadastrar, editar, remover alunos, gera relatório em PDF para download com os dados dos alunos,
 Autenticação com Spring Security!😉
 
-## 💻 Projeto(Extras)
+## 📌| Extras
 - Validação de CPF
 - Insire dados de endereço apenas pelo CEP utilizando a API dos Correios
 - Totalmente integrado com o banco de dados
