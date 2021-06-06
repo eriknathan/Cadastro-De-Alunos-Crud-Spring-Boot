@@ -1,5 +1,4 @@
-<h1 align="center"> Cadastro de Alunos </h1>
-<h3 align="center"> CRUD - SpringBoot </h3>
+<h1 align="center"> Cadastro de Alunos | CRUD - SpringBoot</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
