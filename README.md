@@ -48,7 +48,7 @@ Autenticação com Spring Security!😉
 - Insire dados de endereço apenas pelo CEP utilizando a API dos Correios
 - Totalmente integrado com o banco de dados
 
-## 🔖 Layout
+## 🔖 | Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/VkqslPA4GSUkkYKwNgXsJz/Cadastro-de-Alunos?node-id=0%3A1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo
 
