@@ -17,8 +17,8 @@
 <br>
 
 <p align="center">
-  <img alt="creataccount" src="/UI Design/pag01.png" width="50%"> <img alt="creataccount" src="/UI Design/pag02.png" width="50%">
-  <img alt="creataccount" src="/UI Design/pag03.png" width="50%"> <img alt="creataccount" src="/UI Design/pag04.png" width="50%">
+  <img alt="creataccount" src="/UI Design/pag01.png" width="100%"> <img alt="creataccount" src="/UI Design/pag02.png" width="100%">
+  <img alt="creataccount" src="/UI Design/pag03.png" width="100%"> <img alt="creataccount" src="/UI Design/pag04.png" width="100%">
 </p>
 
 ## 🚀| Tecnologias
