@@ -39,7 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 | Projeto
 
-Essa é um site para Cadastro de Alunos, com as funções de listar, cadastrar, editar, remover alunos, gera relatório em PDF para download com os dados dos alunos,
+Esse é um site para Cadastro de Alunos, com as funções de listar, cadastrar, editar, remover alunos, gera relatório em PDF para download com os dados dos alunos,
 Autenticação com Spring Security!😉
 
 ## 📌 | Extras
