@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!-- Inicia HTML5 e define linguagem como pt-br-->
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml" >
+
+<head>
+
+    <!-- Metas de escala e caracter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Definindo titulo -->
+    <title>login</title>
+
+    <!--Inicio CSS (Bootstrap) / Inicio JS (Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Fim CSS (Bootstrap) / Fim JS (Bootstrap -->
+
+    <!-- CSS e JAVASCRIPT LOCAL-->
+    <link th:href="@{css/Login.css}" rel="stylesheet">
+    <!--Fim e JAVASCRIPT CSS LOCAL-->
+
+    <!-- Importação de fontes -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Fim Importação de fontes -->
+
+</head>
+<body>
+<!-- Inicio | Mensagens de erro / Logout -->
+<div th:if="${param.error}" class="alert warning">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong class="errorresp">Usuario ou Senha inválidos.</strong>
+</div>
+<div th:if="${param.logout}" class="alert warning">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong class="errorresp">Você foi Desconectado.</strong>
+</div>
+<!-- Fim | Mensagens de erro / Logout -->
+
+<div id="login">
+    <!-- Titulo do corpo -->
+    <h2 class="text-center text-white pt-5">Cadastro de Alunos</h2>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+
+                    <!-- Inicio Formulário login -->
+                    <form id="login-form" class="form" th:action="@{/login}" method="post" >
+
+                        <!-- Inicio caixa e escrita Usuario e senha-->
+                        <div class="form-group">
+                            <label for="username" class="text-info1">Login</label><br>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Digite Seu Usuário" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="text-info1">Senha</label><br>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Digite Sua Senha" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- Fim caixa e escrita usuario e senha-->
+
+                            <!-- Caixa de termos -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" required>
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Eu aceito os termos de responsabilidade</label>
+                            </div>
+
+                            <!-- Botão entrar -->
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="submit" onclick="" value="">Entrar</button>
+                            </div>
+
+
+                    </form>
+                    <!-- Fim Formulário login -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <p>Copyright &copy; 2021, SQUARD 06 (UNIFG - COO) - Todos os direitos reservados</p>
+    </div>
+</footer>
+</body>
+</html>

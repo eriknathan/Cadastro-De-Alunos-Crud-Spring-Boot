@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background: linear-gradient(45deg, #03383c, #3fa0a7);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+    background: #ececec;
+    width: 800px;
+    min-height: 65vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+main.container h2.titulo-h2{
+    position: relative;
+
+    margin: 5vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120%;
+    text-align: center;
+    color: #005062;
+}
+
+main.container p.titulo-p{
+    position: relative;
+    margin-top: 12vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #005062;
+}
+
+.grid-8{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: -10px;
+}
+
+.camp_voltar_aux{
+    width: 250px;
+    height: 45px;
+    background-color:#30B40F;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: "Poppins";
+    font-weight: 500;
+    text-decoration: none;
+
+}
+
+#id_voltar{
+
+    width: 150px;
+}
+
+.camp_incluir_aux{
+    width: 250px;
+    height: 45px;
+    background-color:#ab63f3;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: "Poppins";
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 3vh;
+}
+
+#id_incluir{
+    width: 150px;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+}
+  
+.footer-content{
+    display: flex;
+    justify-content: center;
+}
+  
+  .footer-content p{
+    font-family: Poppins;
+    color: #c0c0c0;
+    font-size: 1rem;
+}

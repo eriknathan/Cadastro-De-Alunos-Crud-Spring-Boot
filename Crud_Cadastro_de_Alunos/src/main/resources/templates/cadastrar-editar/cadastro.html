@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <link th:href="@{css/Cadastro.css}" rel="stylesheet">
+
+
+  <title>Cadastrando Aluno</title>
+</head>
+<body>
+<h2>Cadastro de Aluno</h2>
+<main class="container">
+  <form th:action="@{/salvar}" method="post" th:object="${info_alunos}">
+    <div class="grid-1">
+
+      <div class="campo tamanho1 ">
+        <p><Strong>Matrícula</Strong></p>
+        <input id="matriculai" type="text" placeholder="Gerado automaticamente" name="matricula" th:field="*{matricula}" disabled/>
+      </div>
+
+      <div class="">
+        <div class="campo tamanho2 margem4">
+          <p><Strong>Nome</Strong></p>
+          <input id="nomei" type="text" placeholder=" Digite seu nome" maxlength="50" autocomplete="off" name="nome" th:field="*{nome}" required/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid-2">
+
+      <div class="campo tamanho1">
+        <p><strong>Gênero</strong></p>
+        <select id="Ssexo" name="sexo" th:field="*{sexo}" required>
+          <option value="...">...</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="0">Não quero declarar</option>
+        </select>
+      </div>
+
+      <div class="margem2">
+
+        <div class="campo tamanho1">
+          <p><strong>Data de Nascimento</strong></p>
+          <input id="datai" type="date" value="dd-MM-yyyy" name="data_nasc" th:field="*{data_nasc}" min="1900-01-01" max="2005-01-01" required/>
+        </div>
+
+      </div>
+
+      <div class="margem2">
+        <div class="campo tamanho1 cep-mask">
+          <p><strong>CPF</strong><span class="s-opcional"> (Opcional)</span></p>
+          <div class="input_container">
+          <input id="cpfi" type="text" placeholder="Digite seu CPF" maxlength="14" value="" onkeyup="cpfCheck(this)" onkeydown="javascript: fMasc( this, mCPF );" autocomplete="off" name="cpf" th:field="*{cpf}"/>
+          <span id="cpfResponse"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid-3">
+
+      <div class="campo tamanho2">
+        <p><strong>Email</strong></p>
+        <input id="emaili" type="text" placeholder="Digite seu Email" maxlength="40" autocomplete="off" name="email" th:field="*{email}" required/>
+      </div>
+
+    </div>
+
+    <div class="grid-4">
+
+      <div class="campo tamanho">
+        <p><strong>Curso:</strong></p>
+        <select id="Scurso" name="curso" th:field="*{curso}" required>
+          <option value="">Selecione sua Opção</option>
+          <option th:each="c:${cursos}"
+                  th:value="${c.id}"
+                  th:text="${c.nome}"></option>
+        </select>
+      </div>
+
+      <div class="campo tamanho margem1">
+        <p><strong>Período</strong></p>
+        <select id="Speriodo" name="periodo" th:field="*{periodo}" required>
+          <option value="">Selecione sua Opção</option>
+          <option th:each="p:${periodos}"
+                  th:value="${p.id}"
+                  th:text="${p.periodo}"></option>
+
+        </select>
+      </div>
+
+    </div>
+
+    <div class="grid-5">
+
+      <div class="campo tamanho1">
+        <p><strong>CEP</strong></p>
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+               onblur="pesquisacep(this.value);" placeholder="Digite seu CEP" autocomplete="off" th:field="*{endereco.cep}" required/>
+      </div>
+
+      <div class="campo margem3">
+        <p><strong>UF</strong></p>
+        <input name="uf" type="text" id="uf" size="2" class="ufi" placeholder="..." autocomplete="off" th:field="*{endereco.uf}" readonly/>
+      </div>
+
+      <div class="campo tamanho margem3">
+        <p><strong>Cidade</strong></p>
+        <input name="cidade" type="text" id="cidade" size="40" class="scidade" placeholder="..." autocomplete="off" th:field="*{endereco.cidade}" readonly/>
+      </div>
+
+    </div>
+
+    <div class="grid-6">
+
+      <div class="campo tamanho">
+        <p><strong>Bairro</strong></p>
+        <input name="bairro" type="text" id="bairro" size="40" class="Sbairro" placeholder="..." value="" autocomplete="off" th:field="*{endereco.bairro}" readonly/>
+      </div>
+
+      <div class="campo tamanho margem1">
+        <p><strong>Rua</strong></p>
+        <input name="rua" type="text" id="rua" size="60" class="ruai" placeholder="..." value="" autocomplete="off" th:field="*{endereco.rua}" readonly/>
+      </div>
+
+    </div>
+
+    <div class="grid-7">
+
+      <div class="campo tamanho1">
+        <p><strong>Num.</strong></p>
+        <input id="numi" type="text" placeholder="Número" size="10" maxlength="5" autocomplete="off" name="numero" th:field="*{endereco.numero}" />
+      </div>
+
+      <div class="campo tamanho2 margem4">
+        <p><strong>Complemento</strong></p>
+        <input id="compi" type="text" placeholder="Complemento" size="30" maxlength="25" autocomplete="off" name="complemento" th:field="*{endereco.complemento}" />
+      </div>
+
+    </div>
+
+    <div class="grid-8">
+
+      <div class="">
+        <a href="/" class="link camp_voltar_aux" id="id_voltar">Cancelar</a>
+      </div>
+      <div class="margem3">
+        <a ><button class="link camp_incluir_aux" id="id_incluir" type="submit">Salvar</button></a>
+
+      </div>
+
+    </div>
+  </form>
+
+</main>
+<script type="text/javascript" th:src="@{js/Cadastro.js}"></script>
+</body>
+</html>

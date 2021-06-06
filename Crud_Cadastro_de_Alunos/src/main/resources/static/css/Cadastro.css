@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background: linear-gradient(45deg, #03383c, #3fa0a7);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    margin-left: 100px;
+    background: white;
+    width: 700px;
+    min-height: 85vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.campo{
+    margin-bottom: 1em;
+}
+
+input{
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+strong{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.campo input, .campo input[type="email"], .campo select, .campo textarea{
+    padding: 0.2em;
+    border:  2px solid #005062;
+    box-sizing: border-box;
+    border-radius: 7px;
+    background: #E1E1E1;
+    display: block;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.tamanho input, .tamanho input[type="email"], .tamanho select, .tamanho textarea{
+    width: 310px;
+}
+.tamanho1 input, .tamanho1 input[type="email"], .tamanho1 select, .tamanho1 textarea{
+    width: 200px;
+}
+.tamanho2 input, .tamanho2 input[type="email"], .tamanho2 select, .tamanho2 textarea{
+    width: 400px;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.grid-1{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: -10px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: -10px;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: -10px;
+}
+
+.grid-4{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: -10px;
+}
+
+.grid-5{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: -10px;
+}
+
+.grid-6{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: -10px;
+}
+
+.grid-7{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-8{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.margem1{
+    margin-left: 8px;
+}
+
+.margem2{
+    margin-left: 12px;
+}
+
+.margem3{
+    margin-left: 26px;
+}
+
+.margem4{
+    margin-left: 30px;
+}
+
+.camp_incluir_aux{
+    width: 250px;
+    height: 45px;
+    background-color:#30B40F;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: "Poppins";
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#id_incluir{
+    width: 150px;
+}
+
+.camp_voltar_aux{
+    width: 250px;
+    height: 45px;
+    background-color:#ab63f3;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: "Poppins";
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#id_voltar{
+
+    width: 150px;
+}
+
+.link{
+    text-decoration:none;
+}
+
+.input_container{
+    position: relative;
+    direction: ltr;
+}
+
+#cpfi{
+    position: relative;
+    padding-right: 25px;
+}
+
+.img{
+    position: absolute;
+    bottom: 8px;
+    width: 14px;
+    height: 14px;
+    right: 6px;
+    margin-right: 8px;
+
+}
+
+.img2{
+    position: absolute;
+    bottom: 9px;
+    width: 13px;
+    height: 13px;
+    right: 6px;
+    margin-right: 8px
+}
+
+.s-opcional{
+    font-size: 0.7em;
+    margin-bottom: 0.2em;
+}

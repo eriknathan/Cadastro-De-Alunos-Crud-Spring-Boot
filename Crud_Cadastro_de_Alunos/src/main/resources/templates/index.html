@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Listando Alunos</title>
+
+  <link th:href="@{css/Index.css}" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/fd4732aa70.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="img-logout">
+  <a href="/logout"> <img src="images/botao-logout.png" alt=""></a>
+</div>
+
+<!--header do site-->
+<div class="logo">
+  <div class="pesquisar">
+    <svg class="svg_pesquisar" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M39.9082 5.107C36.5022 1.702 32.0402 0 27.5782 0C23.1152 0 18.6532 1.702 15.2482 5.107C9.51118 10.844 8.62718 19.576 12.5572 26.259L1.34019 35.682C-0.350814 37.102 -0.455814 39.521 1.10619 41.082L3.93419 43.91C5.49619 45.472 7.91419 45.367 9.33519 43.676L18.7582 32.459C21.4752 34.057 24.5222 34.874 27.5782 34.874C32.0402 34.874 36.5032 33.172 39.9082 29.768C46.7182 22.957 46.7182 11.916 39.9082 5.107ZM34.2502 24.111C32.4682 25.894 30.0992 26.875 27.5772 26.875C25.0562 26.875 22.6862 25.893 20.9042 24.111C17.2242 20.431 17.2242 14.444 20.9042 10.764C22.6872 8.982 25.0572 8 27.5782 8C30.0992 8 32.4702 8.982 34.2512 10.764C37.9312 14.444 37.9312 20.431 34.2502 24.111Z" fill="white"/>
+    </svg>
+    <input id="buscar" class="caixa" type="text" placeholder="Pesquisar">
+  </div>
+  <h2 class="titulo">Listagem de Estudantes</h2>
+
+  <div class="cadastrar">
+
+    <a href="/Cadastrar" class="link"> <p class="texto"> Cadastrar Aluno  <i class="fa fa-plus-circle" onclick=""></i> </p></a>
+
+  </div>
+
+</div>
+<!--fim header do site-->
+
+<!--caixa de listagem-->
+<div class="box-lista">
+  <table id="tabela" class="table">
+    <thead>
+    <tr>
+      <th class="box-header">Matricula</th>
+      <th class="box-header">Nome</th>
+      <th class="box-header">Curso</th>
+      <th class="box-header"></th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+
+    <tr th:each="infoalunos,i:${infoalunos}" id="tr">
+      <input type="hidden" th:value="${infoalunos.matricula}" th:id="'alunos-matricula' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.nome}" th:id="'alunos-nome' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.curso.nome}" th:id="'alunos-curso-nome' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.periodo.periodo}" th:id="'alunos-periodo-nome' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.sexo}" th:id="'alunos-sexo' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.data_nasc}" th:id="'alunos-nascimento' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.cpf}" th:id="'alunos-cpf' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.email}" th:id="'alunos-email' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.cep}" th:id="'alunos-cep' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.uf}" th:id="'alunos-uf' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.cidade}" th:id="'alunos-cidade' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.bairro}" th:id="'alunos-bairro' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.rua}" th:id="'alunos-rua' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.numero}" th:id="'alunos-numero' + ${i.index}">
+      <input type="hidden" th:value="${infoalunos.endereco.complemento}" th:id="'alunos-complemento' + ${i.index}">
+
+      <td th:text="${infoalunos.matricula}" class="ul_class"></td>
+      <td th:text="${infoalunos.nome}" class="ul_class"></td>
+      <td th:text="${infoalunos.curso.nome}" class="ul_class"></td>
+      <td>
+        <a th:href="@{/editar/{matricula}(matricula=${infoalunos.matricula})}" class="editar" onclick="">Editar</a>
+        <a th:href="@{/remove/{matricula}(matricula=${infoalunos.matricula})}" class="excluir" onclick="">Remover</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="img-download">
+  <a href="" id="btn-relatorio">Gerar Relatório <img src="images/download.png" alt=""></a>
+</div>
+<script type="text/javascript" th:src="@{js/Index.js}"></script>
+<script type="text/javascript" th:src="@{js/relatorio.js}"></script>
+</body>
+
+</html>

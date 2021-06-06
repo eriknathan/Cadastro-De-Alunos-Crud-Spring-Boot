@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #03383c, #3fa0a7);
+    background-repeat: no-repeat;
+    min-height: 95.5vh;
+    min-width: 100vh;
+    font-family: Poppins;
+}
+
+.img-logout{
+    position: relative;
+}
+
+.img-logout img{
+    margin-top: -16px;
+    margin-right: 18px;
+    height: 30px;
+    float: right;
+}
+
+/*header do site*/
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 82px;
+/* identical to box height */
+    color: #FFFFFF;
+}
+
+.pesquisar{
+    justify-content: top;
+    align-items: left;
+    position: relative;
+    text-decoration: none;
+    border: none;
+}
+
+.pesquisar svg{
+    margin-bottom: -10px;
+    width: 40px;
+    height: 30px;
+}
+
+.caixa::placeholder{
+    padding: 15px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.caixa{
+    border-radius: 10px;
+    width: 200px;
+    height: 45px;
+    margin-left: 10px;
+    padding: 0 1rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-family: Poppins;
+}
+
+.cadastrar{
+    border-radius: 10px;
+    width: 200px;
+    height: 45px;
+    margin-left: 10px;
+    background: #F3F3F3;
+    border-radius: 15px;
+}
+
+.cadastrar .texto{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 45px;
+    margin-left: 10px;
+/* identical to box height */
+
+    color: #005062;
+}
+
+.linha-vertical {
+    height: 350px;/*Altura da linha*/
+    border-left: 3px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    margin-top: 50px;
+}
+
+.fas{
+    color: white;
+}
+
+.link{
+    text-decoration:none;
+}
+
+.texto{
+    font-family: "Poppins";
+    font-size: 15px;
+    color: #005062;
+    height: 25px;
+}
+
+/*fim header do site*/
+
+.box-lista{
+    display: flex;
+    justify-content: space-evenly;
+    height: 450px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    overflow-y:auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.box-header{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 52px;
+    margin-top: 15px;
+    text-align: left;
+    color: #005062;
+}
+
+.ul_class{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 34px;
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.editar{
+    width: 100px;
+    height: 30px;
+    background-color:#30b40f;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: "Poppins";
+    text-decoration: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    float:left;
+}
+
+.excluir{
+    width: 100px;
+    height: 30px;
+    background-color:#ab63f3;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: "Poppins";
+    text-decoration: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 115px;
+}
+
+.table{
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    border-color:grey;
+}
+
+.linha-vertical {
+    min-height: 100px;/*Altura da linha*/
+    border-left: 3px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    margin-top: 50px;
+}
+
+.linha{
+width: 10px;
+}
+
+.img-download{
+    text-align: center ;
+    align-items: center ;
+}
+
+.notdisplay{
+    display: none;
+}
+
+.img-download a{
+    width: 25vh;
+    height: 40px;
+    background-color:#30b40f;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Poppins;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.img-download a:hover{
+    background-color:#ab63f3;
+    letter-spacing: 1px;
+}
+
+.img-download img{
+    height: 25px;
+    margin-left: 5px;
+}
