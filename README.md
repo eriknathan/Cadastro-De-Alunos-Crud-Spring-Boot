@@ -17,7 +17,7 @@
   <img alt="creataccount" src="/UI Design/pag03.png" width="100%"> <img alt="creataccount" src="/UI Design/pag04.png" width="100%">
 </p>
 
-## 🚀| Tecnologias
+## 🚀 | Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -38,12 +38,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 **BANCO DE DADOS**
 - MySQL
 
-## 💻| Projeto
+## 💻 | Projeto
 
 Essa é um site para Cadastro de Alunos, com as funções de listar, cadastrar, editar, remover alunos, gera relatório em PDF para download com os dados dos alunos,
 Autenticação com Spring Security!😉
 
-## 📌| Extras
+## 📌 | Extras
 - Validação de CPF
 - Insire dados de endereço apenas pelo CEP utilizando a API dos Correios
 - Totalmente integrado com o banco de dados
