@@ -125,9 +125,9 @@ function fMasc(objeto,mascara) {
     setTimeout("fMascEx()",1)
    }
 
-  function fMascEx() {
-    obj.value=masc(obj.value)
-   }
+function fMascEx() {
+obj.value=masc(obj.value)
+}
 
 function mCPF(cpf){
     cpf=cpf.replace(/\D/g,"")
@@ -141,4 +141,16 @@ cpfCheck = function (el) {
     document.getElementById('cpfResponse').innerHTML = is_cpf(el.value)? '<span style="color:green"><img src="/images/check.png" class="img"></span>' : '<span style="color:red"><img src="/images/close.png" class="img2"></span>';
     if(el.value=='') document.getElementById('cpfResponse').innerHTML = '';
    }
+
+function NASort(a, b) {
+    if (a.innerHTML == 'NA') {
+        return 1;
+    }
+    else if (b.innerHTML == 'NA') {
+        return -1;
+    }
+    return (a.innerHTML > b.innerHTML) ? 1 : -1;
+};
+
+$('#Scurso option').sort(NASort).appendTo('#Scurso');
 

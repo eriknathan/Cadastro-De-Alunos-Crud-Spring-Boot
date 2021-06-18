@@ -125,9 +125,9 @@ function fMasc(objeto,mascara) {
     setTimeout("fMascEx()",1)
    }
 
-function fMascEx() {
-obj.value=masc(obj.value)
-}
+  function fMascEx() {
+    obj.value=masc(obj.value)
+   }
 
 function mCPF(cpf){
     cpf=cpf.replace(/\D/g,"")
@@ -143,10 +143,10 @@ cpfCheck = function (el) {
    }
 
 function NASort(a, b) {
-    if (a.innerHTML == 'Selecione sua Opção') {
+    if (a.innerHTML == 'NA') {
         return 1;
     }
-    else if (b.innerHTML == 'Selecione sua Opção') {
+    else if (b.innerHTML == 'NA') {
         return -1;
     }
     return (a.innerHTML > b.innerHTML) ? 1 : -1;

@@ -84,12 +84,12 @@ public class Controlador {
         return "cadastrar-editar/cadastro";
     }
 
-    @GetMapping("/Cadastrar/Sucesso")
+    @GetMapping(value = "/Cadastrar/Sucesso")
     public String SucessForm(){
         return "cadastrar-editar/Sucesso";
     }
 
-    @GetMapping("/editar/{matricula}")
+    @GetMapping(value = "/editar/{matricula}")
     public String EditForm(@PathVariable("matricula") Integer matricula,Model model){
 
         Optional<Info_alunos> aluno = repoalunos.findById(matricula);
@@ -104,7 +104,7 @@ public class Controlador {
         return "cadastrar-editar/editar";
     }
 
-    @GetMapping("/remove/{matricula}")
+    @GetMapping(value = "/remove/{matricula}")
     public String deleteForm(@PathVariable("matricula") Integer matricula){
 
         Info_alunos aluno = repoalunos.findById(matricula).get();
@@ -114,7 +114,7 @@ public class Controlador {
         return "redirect:/";
     }
 
-    @PostMapping("/salvar")
+    @PostMapping(value = "/salvar")
     public String CadastroForm(@ModelAttribute ("info_alunos") Info_alunos infoalunos){
 
         repoendereco.save(infoalunos.getEndereco());
@@ -123,7 +123,7 @@ public class Controlador {
         return "redirect:Cadastrar/Sucesso";
     }
 
-    @PostMapping("/editar")
+    @PostMapping(value = "/editar")
     public String EditarForm(@ModelAttribute ("info_alunos") Info_alunos infoalunos){
 
         repoendereco.save(infoalunos.getEndereco());

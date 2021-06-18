@@ -79,7 +79,7 @@
       <div class="campo tamanho">
         <p><strong>Curso:</strong></p>
         <select id="Scurso" name="curso" th:field="*{curso}" required>
-          <option value="">Selecione sua Opção</option>
+          <option value="">Selecione sua opção</option>
           <option th:each="c:${cursos}"
                   th:value="${c.id}"
                   th:text="${c.nome}"></option>
@@ -89,7 +89,7 @@
       <div class="campo tamanho margem1">
         <p><strong>Período</strong></p>
         <select id="Speriodo" name="periodo" th:field="*{periodo}" required>
-          <option value="">Selecione sua Opção</option>
+          <option value="">Selecione sua opção</option>
           <option th:each="p:${periodos}"
                   th:value="${p.id}"
                   th:text="${p.periodo}"></option>
