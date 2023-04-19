@@ -17,15 +17,6 @@
   <img alt="creataccount" src="/UI Design/final.png" width="100%">
 </p>
 
-## 👨🏽‍🤝‍👨🏽 | **Desenvolvido pelo Squard06 | UNIFG** 
-- :mortar_board: 202002721 | Erik Nathan de Oliveira Batista
-- :mortar_board: 202002509 | Itallo Monteiro Minatti
-- :mortar_board: 202002088 | Julio Cesar de Barros
-- :mortar_board: 202003105 | Leonardo Viana Gouveia Vieira de Morais
-- :mortar_board: 202002790 | Veron Thiago de Paula Ferreira
-- :mortar_board: 202005574 | Jhonny Glaucio Nascimento de Melo
-- :mortar_board: 202002043 | Beatriz Lira Martins
-
 ## 🚀 | Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
